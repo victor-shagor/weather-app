@@ -1,6 +1,6 @@
 import axios from "axios";
 
-import { location } from "./types";
+import { Location } from "./types";
 
 export const getCityLonLat = async (city: string) => {
   const proxyurl = "https://cors-anywhere.herokuapp.com/";
@@ -13,7 +13,7 @@ export const getCityLonLat = async (city: string) => {
   }
 };
 
-export const getWeatherCondition = async (location: location) => {
+export const getWeatherCondition = async (location: Location) => {
   const { status, data } = await axios.get(
     `https://api.openweathermap.org/data/2.5/onecall?lat=${location.lat}&lon=${location.lng}&units=metric&appid=${process.env.REACT_APP_WEATHER}&exclude=hourly,minutely`
   );

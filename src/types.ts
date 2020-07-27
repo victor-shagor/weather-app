@@ -58,7 +58,7 @@ export type Current = {
   ];
 };
 
-export type location = {
+export type Location = {
   lat: number;
   lng: number;
 };
